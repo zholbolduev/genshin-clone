@@ -4,7 +4,6 @@ import EditProduct from "../components/Product/EditProduct";
 const EditProductPage = () => {
   return (
     <div>
-      EditProductPage
       <EditProduct />
     </div>
   );

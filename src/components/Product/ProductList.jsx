@@ -60,6 +60,7 @@ const ProductList = () => {
             <Box
               sx={{
                 display: "flex",
+                justifyContent: "space-between",
                 flexWrap: "wrap",
                 minHeight: "40vh",
                 mb: "3.5vh",
