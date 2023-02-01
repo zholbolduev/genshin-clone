@@ -1,13 +1,22 @@
 {
   "products": [
     {
-      "title": "Джинн",
-      "desc": "описание",
+      "title": "Jean",
+      "desc": "Descrition",
       "img": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/genshin-impact/5/55/Jean.jpg",
-      "region": "Мондштадт",
-      "vision": "anemo",
-      "weapon": "Меч",
+      "region": "Mondstadt",
+      "vision": "Anemo",
+      "weapon": "Sword",
       "id": 2
+    },
+    {
+      "title": "Kazuha",
+      "desc": "Samurai",
+      "img": "Image",
+      "region": "123456Inazuma",
+      "vision": "Anemo",
+      "weapon": "Sword",
+      "id": 14
     }
   ]
 }
