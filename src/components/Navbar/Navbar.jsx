@@ -1,202 +1,70 @@
 import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContextProvider";
+import "./navbarStyle/navbar.css";
 
 const Navbar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-  let a = 1;
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   const pages = [
-    { name: "ABOUT US", link: "/aboutus", id: 1 },
-    { name: "CONTACT US", link: "/contactus", id: 2 },
-    { name: "PRODUCTS", link: "/products", id: 3 },
+    { name: "HOME", link: "/", id: 1 },
+    { name: "NEWS", link: "#", id: 2 },
+    { name: "CHARACTERS", link: "/products", id: 3 },
+    { name: "EXPLORE", link: "/aboutus", id: 4 },
+    { name: "MORE", link: "/#", id: 4 },
   ];
-
   const { user, handleLogOut } = useAuth();
-
   return (
-    <div>
-      <AppBar position="static" elevation={3}>
-        <Container maxWidth="xl" sx={{ background: "white" }}>
-          <Toolbar disableGutters>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-            >
-              <img
-                id="logo"
-                // src="https://demo.xpeedstudio.com/marketo/wp-content/uploads/2020/06/logo_3.png"
-                alt=""
-              />
-            </Typography>
-
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleOpenNavMenu}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                  color: "black",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: "block", md: "none" },
-                }}
-              >
-                <Box>
-                  {pages.map((page) => (
-                    <MenuItem key={page.id}>
-                      <Link to={page.link}>
-                        <Typography
-                          sx={{
-                            ml: "auto",
-                            my: 1,
-                            color: "black",
-                            display: "block",
-                          }}
-                        >
-                          {page.name}
-                        </Typography>
-                      </Link>
-                    </MenuItem>
-                  ))}
-                </Box>
-              </Menu>
-            </Box>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-            >
-              <img
-                id="logo"
-                // src="https://demo.xpeedstudio.com/marketo/wp-content/uploads/2020/06/logo_3.png"
-                alt=""
-              />
-            </Typography>
-            <Box
-              sx={{
-                justifyContent: "center",
-                flexGrow: 1,
-                display: { xs: "none", md: "flex" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page.id}>
-                  <Link to={page.link}>
-                    <Typography
-                      sx={{
-                        ml: "auto",
-                        my: 2,
-                        color: "black",
-                        display: "block",
-                      }}
-                    >
-                      {page.name}
-                    </Typography>
-                  </Link>
-                </MenuItem>
-              ))}
-              {user.email === "admin@admin.com" ? (
-                <MenuItem>
-                  <Link to="/admin">
-                    <Typography
-                      sx={{
-                        ml: "auto",
-                        my: 2,
-                        color: "black",
-                        display: "block",
-                      }}
-                    >
-                      ADMIN
-                    </Typography>
-                  </Link>
-                </MenuItem>
-              ) : (
-                <MenuItem>
-                  <Link to="/cart">
-                    <Typography
-                      sx={{
-                        ml: "auto",
-                        my: 2,
-                        color: "black",
-                        display: "block",
-                      }}
-                    >
-                      CART
-                    </Typography>
-                  </Link>
-                </MenuItem>
-              )}
-              {/* // -------------------------------------------------------------------- */}
-            </Box>
-
-            <Box sx={{ flexGrow: 0 }}>
-              {user.email ? (
-                <Button
-                  sx={{ color: "black", fontWeight: "bold" }}
-                  onClick={handleLogOut}
-                >
-                  LOGOUT
-                </Button>
-              ) : (
-                <Link to="/auth">
-                  <Button sx={{ color: "black", fontWeight: "bold" }}>
-                    LOGIN
-                  </Button>
-                </Link>
-              )}
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
+    <div className="navbar">
+      <div className="navbar-logo">
+        <img
+          src="https://uploadstatic-sea.mihoyo.com/hk4e/upload/officialsites/202004/GIEN_1587984203_6764.png"
+          alt=""
+        />
+      </div>
+      <ul className="navigation">
+        {pages.map((page) => (
+          <Link className="navigation__item" to={page.link} key={page.id}>
+            <li className="navigation__item" sx={{ textDecoration: "none" }}>
+              {page.name}
+            </li>
+          </Link>
+        ))}
+        <Link className="navigation__item" to="/admin">
+          ADMIN
+        </Link>
+        <Link className="navigation__item" to="/cart">
+          LIKED
+        </Link>
+        {/* {user.email === "admin@admin.com" ? (
+          <Link className="navigation__item" to="/admin">
+            ADMIN
+          </Link>
+        ) : (
+          <Link className="navigation__item" to="/cart">
+            LIKED
+          </Link>
+        )} */}
+      </ul>
+      <div className="navbar-login">
+        <button className="login__btn">
+          <span>Log In</span>
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkM4Q0U4MzlGNzIwQjExRTlCNzFCRjhGQzY5NjE1QzVEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkM4Q0U4M0EwNzIwQjExRTlCNzFCRjhGQzY5NjE1QzVEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzhDRTgzOUQ3MjBCMTFFOUI3MUJGOEZDNjk2MTVDNUQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzhDRTgzOUU3MjBCMTFFOUI3MUJGOEZDNjk2MTVDNUQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz59zFVZAAACLklEQVR42ryXzytEURTH33vGmPzOzxmmSbGSlaXt5D+QIqNYkKz8WCiSbFnJgiaysmCj+Bf4A6wQdkhK+ZFf0fU9Oq9er5l7zzVy6rOYeeec733v3XvOea5SyrGwCIiCGlDO/z2De/ABPsWZSNhAEYiDGfCq8tsr+8Q5RpvXJJoCu8redjnWWtgFQ6pwoxyeVLgYbKq/sy3OqRWmd5NVf2/Z8HsPC2cESeb5/ZUyLWBREJfJJ5wyBJ4bNgxduzTkSIWFaQPsaAIe+JiYTkGcffPZjr/ZggE66xWI+vQYciXIz+M6MqSpMWdg36K6HYATzfVhv3JFDBVpz+JuffYMFS7ice2NaVb45tjbh+YaaUU9Lvg6o+uupXC1KScJlxmcOkC9hWgdaDf4lHmCRAkwZiE8DpolbTEpLHtpwaZKC3MlHS57UqMzGsshGBOc36CVUvujqeLJsLODdgyWwTlPJG1gkveCxOiUVPgrnlX/Z6TluDxz0Qa6Fqz2CiyBQ3AHXkAJSII0mBM8uSZwI20Sp6AzV0MPTS0loBvcakYiT9oWF0DUsmRWgg1JW8w1CFB7G+A7cX6BGxoQMtLR55IbiFOA8KB09PGHvTUOWAG1vxCtDeRYlQx7wdUOBB7TCKgXCDaA0UBcXz5f1/AJk+Bi0c+/18ERuAAP3LUqQSvoAqPstw2mf45NAZ8wtP0bwZSgOEywr2fKa7rjsBVxwaA2WUXrBo9cTN7BlzTRtwADAOPsTPUcvaPqAAAAAElFTkSuQmCC"
+            alt=""
+          />
+          {/* {user.email ? (
+          <p>Log Out</p>
+        ) : (
+          <Link to="/auth">
+            <p>Log In</p>
+          </Link>
+        )} */}
+        </button>
+        <div className="navbar__btn"></div>
+        <div className="burger-menu">
+          <RxHamburgerMenu />
+        </div>
+      </div>
     </div>
   );
 };

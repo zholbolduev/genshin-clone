@@ -24,6 +24,8 @@ const MainRoutes = () => {
     { link: "/contactus", element: <ContactUsPage />, id: 6 },
     { link: "/aboutus", element: <AboutUsPage />, id: 7 },
     { link: "/cart", element: <CartPage />, id: 8 },
+    { link: "/admin", element: <AdminPage />, id: 9 },
+    { link: "/edit/:id", element: <EditProductPage />, id: 10 },
   ];
 
   const PRIVATE_ROUTES = [
@@ -37,22 +39,21 @@ const MainRoutes = () => {
         <Route path={item.link} element={item.element} key={item.id} />
       ))}
 
-      {user
-        ? PRIVATE_ROUTES.map((item) => (
-            <Route
-              path={item.link}
-              element={
-                user.email === "admin@admin.com"
-                  ? item.element
-                  : // <Navigate replace to="*" />
-                    null
-              }
-              key={item.id}
-            />
-          ))
-        : null}
-
-      {}
+      {/* {user
+        ? */}
+      {/* {PRIVATE_ROUTES.map((item) => (
+        <Route
+          path={item.link}
+          element={
+            user.email === "admin@admin.com"
+              ? item.element
+              : // <Navigate replace to="*" />
+                null
+          }
+          key={item.id}
+        />
+      ))} */}
+      {/* : null} */}
     </Routes>
   );
 };
