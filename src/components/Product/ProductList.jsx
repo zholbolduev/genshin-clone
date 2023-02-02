@@ -51,96 +51,28 @@ const ProductList = () => {
 
   return (
     <div className="container-bg">
-      <Container>
-        <Box>
-          <Grid container spacing={3}>
-            <Grid
-              item
-              sx={{
-                justifyContent: "center",
-                display: "flex",
-                flexWrap: "wrap",
-              }}
-              md={9}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexWrap: "wrap",
-                  minHeight: "40vh",
-                  mb: "3.5vh",
-                }}
-              >
-                {products ? (
-                  currentData().map((item) => (
-                    <ProductCard item={item} key={item.id} />
-                  ))
-                ) : (
-                  <h2>Loading...</h2>
-                )}
-              </Box>
-              <Pagination
-                count={count}
-                variant="outlined"
-                shape="rounded"
-                page={page}
-                onChange={(e, p) => setPage(p)}
-              />
-            </Grid>
-            <Grid item md={3}>
-              <Paper>
-                <TextField
-                  id="input-with-icon-textfield"
-                  label="Search..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <SearchIcon />
-                      </InputAdornment>
-                    ),
-                  }}
-                  variant="standard"
-                />
-                <FormControl>
-                  <FormLabel id="demo-radio-buttons-group-label">
-                    Type
-                  </FormLabel>
-                  <RadioGroup
-                    aria-labelledby="demo-radio-buttons-group-label"
-                    defaultValue="all"
-                    onChange={(e) => fetchByParams("type", e.target.value)}
-                    name="radio-buttons-group"
-                  >
-                    <FormControlLabel
-                      value="all"
-                      control={<Radio />}
-                      label="all"
-                    />
-                    <FormControlLabel
-                      value="daily"
-                      control={<Radio />}
-                      label="daily"
-                    />
-                    <FormControlLabel
-                      value="action"
-                      control={<Radio />}
-                      label="action"
-                    />
-                    <FormControlLabel
-                      value="fantasy"
-                      control={<Radio />}
-                      label="fantasy"
-                    />
-                  </RadioGroup>
-                </FormControl>
-              </Paper>
-            </Grid>
-          </Grid>
-        </Box>
-      </Container>
+      <div className="products__conatiner">
+        <Grid
+          container
+          spacing={{ xs: 2, sm: 4, md: 10 }}
+          columns={{ xs: 4, sm: 8, md: 12 }}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {products ? (
+            currentData().map((item) => (
+              <Grid item xs={6} sm={4} md={3}>
+                <ProductCard item={item} key={item.id} />
+              </Grid>
+            ))
+          ) : (
+            <h2>Loading...</h2>
+          )}
+        </Grid>
+      </div>
     </div>
   );
 };

@@ -1,22 +1,40 @@
 {
   "products": [
     {
-      "title": "Jean",
-      "desc": "Descrition",
-      "img": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/genshin-impact/5/55/Jean.jpg",
-      "region": "Mondstadt",
-      "vision": "Anemo",
-      "weapon": "Sword",
-      "id": 2
+      "title": "Kazuha",
+      "desc": "iuy",
+      "img": "https://animecorner.me/wp-content/uploads/2021/06/anime-corner-kazuha-1-scaled.jpg",
+      "region": "Inazuma",
+      "vision": "oiuyt",
+      "weapon": "iuy",
+      "id": 1
+    },
+    {
+      "title": "Kazuhaaaa",
+      "desc": "iuy",
+      "img": "https://animecorner.me/wp-content/uploads/2021/06/anime-corner-kazuha-1-scaled.jpg",
+      "region": "Inazuma",
+      "vision": "oiuyt",
+      "weapon": "iuy",
+      "id": 1
+    },
+    {
+      "title": "Zhong Li",
+      "desc": "iuy",
+      "img": "https://animecorner.me/wp-content/uploads/2021/06/anime-corner-kazuha-1-scaled.jpg",
+      "region": "Inazuma",
+      "vision": "oiuyt",
+      "weapon": "iuy",
+      "id": 1
     },
     {
       "title": "Kazuha",
-      "desc": "A wandering samurai of the once-famed Kaedehara Clan with an ability to read the sounds of nature, Kazuha is a temporary crewmember of The Crux. Despite being burdened by the many happenings of his past, Kazuha still maintains an easygoing disposition.",
-      "img": "https://cdn.mos.cms.futurecdn.net/rX39jegVzGZbUzCutqXwSA.jpg",
+      "desc": "iuy",
+      "img": "https://animecorner.me/wp-content/uploads/2021/06/anime-corner-kazuha-1-scaled.jpg",
       "region": "Inazuma",
-      "vision": "Anemo",
-      "weapon": "Sword",
-      "id": 15
+      "vision": "oiuyt",
+      "weapon": "iuy",
+      "id": 1
     }
   ]
 }

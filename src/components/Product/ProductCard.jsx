@@ -24,56 +24,63 @@ const ProductCard = ({ item }) => {
   return (
     <>
       <div class="card">
-        <div className="wrapper__img">
-          {/* <img src="https://cdn.donmai.us/sample/9a/f7/__jean_and_jean_genshin_impact_drawn_by_anbe_yoshirou__sample-9af7458aa05a1c6efc0d9886c7b5bcac.jpg"></img> */}
-          <CardMedia
-            component="img"
-            sx={{ borderRadius: "10px" }}
-            // style={{ height: "250px", width: "180px" }}
-            // padding="20px 20px 0px 0px"
-            image={item.img}
-            alt={item.title}
-          />
+        <div
+          className="wrapper__img"
+          style={{ backgroundImage: `url(${item.img})` }}
+        >
+          <h5>{item.title}</h5>
         </div>
         <div className="card__title">
-          <p>
-            {" "}
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="div"
-              style={{ color: "#FFFFFF" }}
-            >
-              {item.title}
-            </Typography>
-          </p>
           {/* {user.email === "admin@admin.com" ? ( */}
-          <CardActions>
+          <CardActions
+            sx={{
+              margin: "0 auto",
+              display: "flex",
+              justifyContent: "space-around",
+            }}
+          >
             <Button
-              style={{ color: "white" }}
-              size="large"
+              style={{
+                color: "white",
+                textShadow:
+                  "0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff ",
+                zIndex: "1",
+              }}
+              // size="large"
               onClick={() => deleteProduct(item.id)}
             >
               Delete
             </Button>
             <Button
-              style={{ color: "white" }}
-              size="large"
+              style={{
+                color: "white",
+                textShadow:
+                  "0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff ",
+                zIndex: "1",
+              }}
+              // size="large"
               onClick={() => navigate(`/edit/${item.id}`)}
             >
               Edit
             </Button>
             <Button
-              style={{ color: "white" }}
-              size="large"
+              style={{
+                color: "white",
+                textShadow:
+                  "0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff ",
+                zIndex: "1",
+              }}
+              // size="large"
               onClick={() => navigate(`/products/${item.id}`)}
             >
               Details
             </Button>
           </CardActions>
-          {/* ) : ( */}
           <IconButton onClick={() => addProductToCart(item)}>
             <FavoriteIcon
+              sx={{
+                zIndex: "1",
+              }}
               size="large"
               color={checkProductInCart(item.id) ? "error" : ""}
             />
