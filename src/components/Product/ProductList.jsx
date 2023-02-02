@@ -20,6 +20,7 @@ import { useProduct } from "../../contexts/ProductContextProvider";
 import ProductCard from "./ProductCard";
 import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
+import "../Product/ProductList.css";
 
 const ProductList = () => {
   const { products, getProducts, fetchByParams } = useProduct();
@@ -49,90 +50,98 @@ const ProductList = () => {
   }
 
   return (
-    <Container>
-      <Box>
-        <Grid container spacing={3}>
-          <Grid
-            item
-            sx={{ justifyContent: "center", display: "flex", flexWrap: "wrap" }}
-            md={9}
-          >
-            <Box
+    <div className="container-bg">
+      <Container>
+        <Box>
+          <Grid container spacing={3}>
+            <Grid
+              item
               sx={{
+                justifyContent: "center",
                 display: "flex",
-                justifyContent: "space-between",
                 flexWrap: "wrap",
-                minHeight: "40vh",
-                mb: "3.5vh",
               }}
+              md={9}
             >
-              {products ? (
-                currentData().map((item) => (
-                  <ProductCard item={item} key={item.id} />
-                ))
-              ) : (
-                <h2>Loading...</h2>
-              )}
-            </Box>
-            <Pagination
-              count={count}
-              variant="outlined"
-              shape="rounded"
-              page={page}
-              onChange={(e, p) => setPage(p)}
-            />
-          </Grid>
-          <Grid item md={3}>
-            <Paper>
-              <TextField
-                id="input-with-icon-textfield"
-                label="Search..."
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <SearchIcon />
-                    </InputAdornment>
-                  ),
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  flexWrap: "wrap",
+                  minHeight: "40vh",
+                  mb: "3.5vh",
                 }}
-                variant="standard"
+              >
+                {products ? (
+                  currentData().map((item) => (
+                    <ProductCard item={item} key={item.id} />
+                  ))
+                ) : (
+                  <h2>Loading...</h2>
+                )}
+              </Box>
+              <Pagination
+                count={count}
+                variant="outlined"
+                shape="rounded"
+                page={page}
+                onChange={(e, p) => setPage(p)}
               />
-              <FormControl>
-                <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
-                <RadioGroup
-                  aria-labelledby="demo-radio-buttons-group-label"
-                  defaultValue="all"
-                  onChange={(e) => fetchByParams("type", e.target.value)}
-                  name="radio-buttons-group"
-                >
-                  <FormControlLabel
-                    value="all"
-                    control={<Radio />}
-                    label="all"
-                  />
-                  <FormControlLabel
-                    value="daily"
-                    control={<Radio />}
-                    label="daily"
-                  />
-                  <FormControlLabel
-                    value="action"
-                    control={<Radio />}
-                    label="action"
-                  />
-                  <FormControlLabel
-                    value="fantasy"
-                    control={<Radio />}
-                    label="fantasy"
-                  />
-                </RadioGroup>
-              </FormControl>
-            </Paper>
+            </Grid>
+            <Grid item md={3}>
+              <Paper>
+                <TextField
+                  id="input-with-icon-textfield"
+                  label="Search..."
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <SearchIcon />
+                      </InputAdornment>
+                    ),
+                  }}
+                  variant="standard"
+                />
+                <FormControl>
+                  <FormLabel id="demo-radio-buttons-group-label">
+                    Type
+                  </FormLabel>
+                  <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="all"
+                    onChange={(e) => fetchByParams("type", e.target.value)}
+                    name="radio-buttons-group"
+                  >
+                    <FormControlLabel
+                      value="all"
+                      control={<Radio />}
+                      label="all"
+                    />
+                    <FormControlLabel
+                      value="daily"
+                      control={<Radio />}
+                      label="daily"
+                    />
+                    <FormControlLabel
+                      value="action"
+                      control={<Radio />}
+                      label="action"
+                    />
+                    <FormControlLabel
+                      value="fantasy"
+                      control={<Radio />}
+                      label="fantasy"
+                    />
+                  </RadioGroup>
+                </FormControl>
+              </Paper>
+            </Grid>
           </Grid>
-        </Grid>
-      </Box>
-    </Container>
+        </Box>
+      </Container>
+    </div>
   );
 };
 

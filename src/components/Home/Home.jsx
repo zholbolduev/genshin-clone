@@ -7,7 +7,7 @@ import HomeRegions from "./HomeRegions";
 const Home = () => {
   return (
     <div className="parallax-div">
-      <Parallax pages={3.55} style={{ top: "0", left: "0" }} class="animation">
+      <Parallax pages={4} style={{ top: "0", left: "0" }} class="animation">
         <ParallaxLayer offset={0} speed={0.25}>
           <div class="animation_layer parallax" id="artback"></div>
         </ParallaxLayer>
@@ -17,13 +17,13 @@ const Home = () => {
         <ParallaxLayer offset={0} speed={0.29}>
           <div class="animation_layer parallax" id="grass-front"></div>
         </ParallaxLayer>
-        <ParallaxLayer offset={1} speed={0.25}>
+        <ParallaxLayer offset={1}>
           <HomeNews />
         </ParallaxLayer>
-        <ParallaxLayer offset={2} speed={0.25}>
+        <ParallaxLayer offset={2}>
           <HomeRegions />
         </ParallaxLayer>
-        <ParallaxLayer offset={3} speed={0.25}>
+        <ParallaxLayer offset={3.25} style={{ overflow: "hidden" }}>
           <Footer />
         </ParallaxLayer>
       </Parallax>

@@ -30,7 +30,7 @@ body {
 } */
 
 .card {
-  /* background: #191c29; */
+  background: #191c29;
   width: var(--card-width);
   height: var(--card-height);
   padding: 3px;
@@ -72,7 +72,7 @@ body {
     #4e00c2
   );
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: -1%;
   left: -2%;
   animation: spin 2.5s linear infinite;
@@ -84,7 +84,7 @@ body {
   top: calc(var(--card-height) / 6);
   left: 0;
   right: 0;
-  z-index: -1;
+  z-index: 0;
   height: 100%;
   width: 100%;
   margin: 0 auto;
@@ -110,24 +110,27 @@ body {
   }
 }
 
-a {
+/* a {
   color: #212534;
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
   margin-top: 2rem;
-}
+} */
 
 .card img {
+  z-index: 1;
   width: 100%;
   height: 100%;
 }
 
 .wrapper__img {
   height: 80%;
+  z-index: 1;
 }
 
 .card__title {
+  z-index: 1;
   height: 20%;
   display: flex;
   align-items: center;
