@@ -63,12 +63,19 @@ const ProductCard = ({ item }) => {
             >
               Edit
             </Button>
+            <Button
+              style={{ color: "white" }}
+              size="large"
+              onClick={() => navigate(`/products/${item.id}`)}
+            >
+              Details
+            </Button>
           </CardActions>
           {/* ) : ( */}
           <IconButton onClick={() => addProductToCart(item)}>
             <FavoriteIcon
               size="large"
-              color={checkProductInCart(item.id) ? "primary" : ""}
+              color={checkProductInCart(item.id) ? "error" : ""}
             />
           </IconButton>
           {/* )}{" "} */}

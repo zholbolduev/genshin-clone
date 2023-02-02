@@ -27,6 +27,7 @@ const EditProduct = () => {
     <Box className="pop">
       <Box
         style={{
+          width: "70%",
           marginRight: "250px",
           marginLeft: "250px",
           display: "flex",
@@ -43,7 +44,7 @@ const EditProduct = () => {
       >
         <div
           style={{
-            width: "400px",
+            width: "50%",
             display: "flex",
             flexDirection: "column",
             flexWrap: "wrap",

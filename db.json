@@ -11,12 +11,12 @@
     },
     {
       "title": "Kazuha",
-      "desc": "Samurai",
-      "img": "Image",
-      "region": "123456Inazuma",
+      "desc": "A wandering samurai of the once-famed Kaedehara Clan with an ability to read the sounds of nature, Kazuha is a temporary crewmember of The Crux. Despite being burdened by the many happenings of his past, Kazuha still maintains an easygoing disposition.",
+      "img": "https://cdn.mos.cms.futurecdn.net/rX39jegVzGZbUzCutqXwSA.jpg",
+      "region": "Inazuma",
       "vision": "Anemo",
       "weapon": "Sword",
-      "id": 14
+      "id": 15
     }
   ]
 }
