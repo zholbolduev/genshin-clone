@@ -28,7 +28,7 @@ const AddProduct = () => {
           marginLeft: "250px",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-evenly",
+          justifyContent: "center",
         }}
         className="imgadd"
         component="form"
@@ -40,7 +40,8 @@ const AddProduct = () => {
       >
         <div
           style={{
-            width: "500px",
+            marginRight: "50px",
+            width: "400px",
             display: "flex",
             flexDirection: "column",
             flexWrap: "wrap",
@@ -62,8 +63,8 @@ const AddProduct = () => {
             placeholder="Title"
             style={{
               fontSize: "20px",
-              marginTop: "15px",
-              height: "50px",
+              marginTop: "5px",
+              height: "30px",
               borderRadius: "10px",
               color: "#4e4d4b",
               backgroundColor: "#fff",
@@ -78,8 +79,8 @@ const AddProduct = () => {
             placeholder="Descripton"
             style={{
               fontSize: "20px",
-              marginTop: "15px",
-              height: "50px",
+              marginTop: "5px",
+              height: "30px",
               borderRadius: "10px",
               color: "#4e4d4b",
               backgroundColor: "#fff",
@@ -94,8 +95,8 @@ const AddProduct = () => {
             placeholder="Image"
             style={{
               fontSize: "20px",
-              marginTop: "15px",
-              height: "50px",
+              marginTop: "5px",
+              height: "30px",
               borderRadius: "10px",
               color: "#4e4d4b",
               backgroundColor: "#fff",
@@ -110,8 +111,8 @@ const AddProduct = () => {
             placeholder="Region"
             style={{
               fontSize: "20px",
-              marginTop: "15px",
-              height: "50px",
+              marginTop: "5px",
+              height: "30px",
               borderRadius: "10px",
               color: "#4e4d4b",
               backgroundColor: "#fff",
@@ -125,8 +126,8 @@ const AddProduct = () => {
             placeholder="Vision"
             style={{
               fontSize: "20px",
-              marginTop: "15px",
-              height: "50px",
+              marginTop: "5px",
+              height: "30px",
               borderRadius: "10px",
               color: "#4e4d4b",
               backgroundColor: "#fff",
@@ -140,8 +141,8 @@ const AddProduct = () => {
             placeholder="Weapon"
             style={{
               fontSize: "20px",
-              marginTop: "15px",
-              height: "50px",
+              marginTop: "5px",
+              height: "30px",
               borderRadius: "10px",
               color: "#4e4d4b",
               backgroundColor: "#fff",
@@ -167,7 +168,7 @@ const AddProduct = () => {
             Add Character
           </Button>
         </div>
-        <div className="addab">
+        <div className="addab" style={{ marginRight: "15px" }}>
           В Genshin Impact есть особая валюта — примогены. Данную валюту игроки
           могут тратить на самый разный контент, однако мы настоятельно
           рекомендуем вкладывать ее только в призывы. Игра то и дело будет
