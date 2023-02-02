@@ -10,15 +10,46 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { useCart } from "../../contexts/CartContextProvider";
 import "../Cart/CartItem.css";
+import bc from "../Product/image/b3d899f.png";
+
 const CartItem = ({ item }) => {
   const { changeProductCount, deleteCartProduct } = useCart();
 
   return (
-    <Grid container spacing={5} alignItems="center" className="cart">
+    // <Box
+    //   sx={{
+    //     display: "flex",
+    //     backgroundColor: "orange",
+    //     height: "fit-content",
+    //   }}
+    // >
+    //   <Box
+    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
+    //   ></Box>
+    //   <Box
+    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
+    //   ></Box>
+    //   <Box
+    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
+    //   ></Box>
+    //   <Box
+    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
+    //   ></Box>
+    //   <Box
+    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
+    //   ></Box>
+    // </Box>
+
+    <Grid container spacing={5} alignItems="center">
       <div
         style={{
           display: "flex",
-          height: "40vh",
+          // height: "40vh",
+          // backgroundImage: `url(${bc})`,
+          background: "black",
+          width: "100%",
+          margin: "50px 0",
+          borderRadius: "15px",
         }}
       >
         <Grid item>
@@ -42,6 +73,7 @@ const CartItem = ({ item }) => {
             variant="p"
             component="div"
             style={{
+              color: "white",
               fontSize: "30px",
               marginLeft: "20px",
               marginTop: "75px",
@@ -55,33 +87,52 @@ const CartItem = ({ item }) => {
             gutterBottom
             variant="p"
             component="div"
-            style={{ fontSize: "30px", marginLeft: "20px", marginTop: "75px" }}
+            style={{
+              color: "white",
+
+              fontSize: "30px",
+              marginLeft: "20px",
+              marginTop: "75px",
+            }}
           >
-            {item.item.type}
+            {item.item.desc}
           </Typography>
         </Grid>
         <Grid item style={{ marginTop: "75px" }}>
           <Typography
             variant="p"
             color="text.secondary"
-            style={{ fontSize: "30px", marginLeft: "20px" }}
+            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
           >
-            Price: {item.item.price}
+            {item.item.region}
           </Typography>
         </Grid>
         <Grid item style={{ marginTop: "75px" }}>
           <Typography
             variant="p"
             color="text.secondary"
-            style={{ fontSize: "30px", marginLeft: "20px" }}
+            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
           >
-            Quantity:{" "}
+            {item.item.vision}
+          </Typography>
+        </Grid>
+        <Grid item style={{ marginTop: "75px" }}>
+          <Typography
+            variant="p"
+            color="text.secondary"
+            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
+          >
+            {item.item.weapon}
+          </Typography>
+        </Grid>
+        {/* <Grid item style={{ marginTop: "75px" }}> */}
+        {/* <Typography
+            variant="p"
+            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
+          >
             <input
-              style={{ height: "20px", width: "20px" }}
-              type="number"
-              min={1}
-              max={100}
-              value={item.count}
+              style={{ height: "20px", width: "20px", color: "white" }}
+              value={item.vision}
               onChange={(e) => {
                 changeProductCount(e.target.value, item.item.id);
               }}
@@ -92,11 +143,11 @@ const CartItem = ({ item }) => {
           <Typography
             variant="p"
             color="text.secondary"
-            style={{ fontSize: "30px", marginLeft: "20px" }}
+            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
           >
             SubPrice: {item.subPrice}
           </Typography>
-        </Grid>
+        </Grid> */}
         <Grid item style={{ marginTop: "75px" }}>
           <Button
             style={{ marginLeft: "20px" }}
