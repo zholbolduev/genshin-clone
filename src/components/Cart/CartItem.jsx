@@ -10,7 +10,7 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { useCart } from "../../contexts/CartContextProvider";
 import "../Cart/CartItem.css";
-import bc from "../Product/image/b3d899f.png";
+import bc from "../Product/image/yellow.jpg";
 
 const CartItem = ({ item }) => {
   const { changeProductCount, deleteCartProduct } = useCart();
@@ -45,8 +45,9 @@ const CartItem = ({ item }) => {
         style={{
           display: "flex",
           // height: "40vh",
-          // backgroundImage: `url(${bc})`,
-          background: "black",
+          backgroundImage: `url(${bc})`,
+          backgroundSize: "cover",
+
           width: "100%",
           margin: "50px 0",
           borderRadius: "15px",
@@ -82,7 +83,7 @@ const CartItem = ({ item }) => {
             {item.item.title}
           </Typography>
         </Grid>
-        <Grid item>
+        {/* <Grid item>
           <Typography
             gutterBottom
             variant="p"
@@ -97,7 +98,7 @@ const CartItem = ({ item }) => {
           >
             {item.item.desc}
           </Typography>
-        </Grid>
+        </Grid> */}
         <Grid item style={{ marginTop: "75px" }}>
           <Typography
             variant="p"
@@ -151,7 +152,8 @@ const CartItem = ({ item }) => {
         <Grid item style={{ marginTop: "75px" }}>
           <Button
             style={{ marginLeft: "20px" }}
-            variant="outlined"
+            variant="contained"
+            color="error"
             size="large"
             onClick={() => deleteCartProduct(item.item.id)}
           >

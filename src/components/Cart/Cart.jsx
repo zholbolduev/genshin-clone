@@ -3,7 +3,7 @@ import { Container } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { useCart } from "../../contexts/CartContextProvider";
 import CartItem from "./CartItem";
-import bc from "../Product/image/1a4f9e2bd4d5f150161991ba73e7bb86.jpg";
+import bc from "../Product/image/yellow.jpg";
 const Cart = () => {
   const { cart, getCart, clearCart } = useCart();
   useEffect(() => {
@@ -38,15 +38,11 @@ const Cart = () => {
       <Container>
         <Button
           variant="contained"
-          style={{ background: "green" }}
+          style={{ background: "red" }}
           onClick={clearCart}
         >
           Delete
         </Button>
-        <Typography fontSize={21} style={{ color: "white" }}>
-          {" "}
-          Total Character: {cart?.totalPrice}
-        </Typography>
       </Container>
     </>
   );
