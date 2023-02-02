@@ -1,0 +1,162 @@
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+.navbar {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* height: 66px; */
+  background-color: rgba(17, 17, 17, 0.5);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation__item {
+  color: #ccc;
+  text-decoration: none;
+  list-style: none;
+  font-size: calc(5px + 1vw);
+  margin: 0 10px;
+}
+
+.navigation__item:hover {
+  text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+  color: #fff;
+}
+
+.auth {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.auth p {
+  color: white;
+  margin-right: 20px;
+  font-size: calc(5px + 1vw);
+}
+.navbar-logo {
+  width: 150px;
+  margin-left: 15px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* float: left; */
+  margin-left: 8px;
+  padding-top: 5px;
+}
+
+.navbar-logo img {
+  width: 100%;
+  /* height: 100%; */
+  /* margin-left: 20px; */
+}
+
+.navbar-login {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+}
+
+.navbar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 55%;
+  background: url(https://webstatic.hoyoverse.com/upload/event/2020/11/06/097f419d5e84de22dd46463e4e7bff8c_6384289011155822242.png)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar__btn p {
+  /* font-size: 14px; */
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.login__btn {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border: 0;
+  outline: none;
+  background: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: #ccc;
+  cursor: pointer;
+  width: 40%;
+}
+
+.login__btn:hover {
+  color: #fff;
+}
+
+.login__btn img {
+  margin-left: 18px;
+}
+
+.burger-menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 999px) {
+  .navbar-login {
+    width: 40%;
+  }
+  .navigation {
+    display: none;
+  }
+}
+
+@media (max-width: 798px) {
+  .navbar-login {
+    width: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar-login {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-login {
+    width: 60%;
+  }
+  .navbar-logo {
+    width: 130px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-login {
+    width: 70%;
+  }
+}
+
+@media (max-width: 415px) {
+  .navbar-login {
+    width: 80%;
+  }
+  .navbar-logo {
+    width: 110px;
+  }
+}

@@ -1,0 +1,290 @@
+a,
+ul,
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.parallax-div {
+  margin-bottom: 100px;
+}
+
+.animation,
+.animation_layer {
+  height: 100vh;
+}
+
+.animation {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.animation_layer {
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+}
+.animation_layer.parallax {
+  position: fixed;
+  height: 1000px;
+}
+
+#artback {
+  background-image: url(../images/genshin_wallpaper.jpg);
+}
+
+#mountain {
+  background-image: url(../images/mountains.png);
+}
+
+#logoland {
+  background-image: url(../images/logo_land.png);
+}
+
+#jungle1 {
+  background-image: url(../images/jungle1.png);
+}
+
+#jungle2 {
+  background-image: url(../images/jungle2.png);
+}
+
+#jungle3 {
+  background-image: url(../images/jungle3.png);
+}
+
+#grass-back {
+  background-image: url(../images/grass-back.png);
+}
+
+#grass-front {
+  background-image: url(../images/grass-front.png);
+}
+
+#manonmountain {
+  background-image: url(../images/aether.png);
+}
+
+.black {
+  background-color: #210002;
+}
+
+.MuiToolbar-root {
+  background-color: #ffaf1b;
+}
+
+.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+  box-shadow: none !important;
+}
+
+/* ! ========================== NEWS START ============================== */
+.news {
+  padding: 100px 0 100px;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/news-wallpaper.jpg);
+}
+
+.news h3 {
+  /* margin: 100px auto 50px; */
+  /* padding-top: 100px; */
+  color: white;
+  font-size: 3em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.news-main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.swiper {
+  width: 50%;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .swiper-pagination-bullet-active,
+.swiper-pagination-bullet {
+  background-color: #fff;
+} */
+
+.swiper-pagination-bullet-active,
+.swiper-pagination-bullet {
+  background-color: white;
+}
+
+.news__content {
+  width: 50%;
+  background: rgba(38, 18, 12, 0.62);
+}
+
+.news__tab__list {
+  padding: 0;
+  margin-left: 20px;
+  display: flex;
+  align-items: flex-start;
+  width: 90%;
+  margin: 35px 0 0;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.news__tab__item {
+  color: #ffd49f;
+  padding: 0 19px 12px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* .news__tab__item::after {
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #ffd49f;
+} */
+
+.news-list {
+  margin-left: 20px;
+  width: 90%;
+  padding: 0;
+  /* margin: 0 auto; */
+}
+
+.news-list li {
+  padding: 1px;
+}
+
+.news-list li:hover {
+  background-color: rgba(81, 64, 58, 0.267);
+}
+
+.news__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* height: 50px; */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  box-sizing: content-box;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.news__item__title {
+  line-height: 20px;
+}
+
+.news__item__date {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 14px;
+}
+
+@media (max-width: 798px) {
+  .news__content {
+    width: 100%;
+  }
+  .swiper {
+    width: 100%;
+  }
+  .city__item {
+    height: 150px;
+  }
+}
+
+/* ! ========================== CITY START ============================== */
+.city {
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+
+.city__list {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.city__item {
+  width: 100%;
+  height: 220px;
+  cursor: pointer;
+  transition: 1s;
+  display: block;
+}
+
+.city__item:hover {
+  border: 5px solid white;
+  transform: scale(1.05);
+}
+
+#mond {
+  background-image: url(https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200211/2020021114275255981.jpg);
+}
+
+#liyue {
+  background-image: url(https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200526/2020052612372361982.jpg);
+}
+
+#inazuma {
+  background-image: url(https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210720/2021072015230536749.jpg);
+}
+
+#sumeru {
+  background-image: url(https://webstatic.hoyoverse.com/upload/contentweb/2022/08/15/b01e3edba8378a485bd2f8b2075e4e86_1690987846820777555.jpg);
+}
+
+.city__item-bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  font-size: 2em;
+  color: #fff;
+}

@@ -37,7 +37,7 @@ const Auth = () => {
     handleLogOut,
   } = useAuth();
   return (
-    <div>
+    <div className="authPage">
       {" "}
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">

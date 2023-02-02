@@ -1,7 +1,7 @@
 import React from "react";
 
 const AboutUs = () => {
-  return <div>fsdg</div>;
+  return <div></div>;
 };
 
 export default AboutUs;

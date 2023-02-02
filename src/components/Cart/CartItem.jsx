@@ -9,66 +9,156 @@ import {
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { useCart } from "../../contexts/CartContextProvider";
+import "../Cart/CartItem.css";
+import bc from "../Product/image/b3d899f.png";
 
 const CartItem = ({ item }) => {
   const { changeProductCount, deleteCartProduct } = useCart();
 
   return (
+    // <Box
+    //   sx={{
+    //     display: "flex",
+    //     backgroundColor: "orange",
+    //     height: "fit-content",
+    //   }}
+    // >
+    //   <Box
+    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
+    //   ></Box>
+    //   <Box
+    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
+    //   ></Box>
+    //   <Box
+    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
+    //   ></Box>
+    //   <Box
+    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
+    //   ></Box>
+    //   <Box
+    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
+    //   ></Box>
+    // </Box>
+
     <Grid container spacing={5} alignItems="center">
-      <Grid item>
-        <Box
-          component="img"
-          sx={{
-            height: 50,
-            width: 50,
-          }}
-          src={item.item.img}
-          alt={item.item.title}
-        />
-      </Grid>
-      <Grid item>
-        <Typography gutterBottom variant="p" component="div">
-          {item.item.title}
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography gutterBottom variant="p" component="div">
-          {item.item.type}
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography variant="p" color="text.secondary">
-          Price: {item.item.price}
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography variant="p" color="text.secondary">
-          Quantity:{" "}
-          <input
-            type="number"
-            min={1}
-            max={100}
-            value={item.count}
-            onChange={(e) => {
-              changeProductCount(e.target.value, item.item.id);
+      <div
+        style={{
+          display: "flex",
+          // height: "40vh",
+          // backgroundImage: `url(${bc})`,
+          background: "black",
+          width: "100%",
+          margin: "50px 0",
+          borderRadius: "15px",
+        }}
+      >
+        <Grid item>
+          <Box
+            style={{
+              display: "flex",
+              borderRadius: "15px",
             }}
-          ></input>
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography variant="p" color="text.secondary">
-          SubPrice: {item.subPrice}
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Button
-          variant="outlined"
-          size="small"
-          onClick={() => deleteCartProduct(item.item.id)}
-        >
-          Remove
-        </Button>
-      </Grid>
+            component="img"
+            sx={{
+              height: 200,
+              width: 400,
+            }}
+            src={item.item.img}
+            alt={item.item.title}
+          />
+        </Grid>
+        <Grid item>
+          <Typography
+            gutterBottom
+            variant="p"
+            component="div"
+            style={{
+              color: "white",
+              fontSize: "30px",
+              marginLeft: "20px",
+              marginTop: "75px",
+            }}
+          >
+            {item.item.title}
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography
+            gutterBottom
+            variant="p"
+            component="div"
+            style={{
+              color: "white",
+
+              fontSize: "30px",
+              marginLeft: "20px",
+              marginTop: "75px",
+            }}
+          >
+            {item.item.desc}
+          </Typography>
+        </Grid>
+        <Grid item style={{ marginTop: "75px" }}>
+          <Typography
+            variant="p"
+            color="text.secondary"
+            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
+          >
+            {item.item.region}
+          </Typography>
+        </Grid>
+        <Grid item style={{ marginTop: "75px" }}>
+          <Typography
+            variant="p"
+            color="text.secondary"
+            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
+          >
+            {item.item.vision}
+          </Typography>
+        </Grid>
+        <Grid item style={{ marginTop: "75px" }}>
+          <Typography
+            variant="p"
+            color="text.secondary"
+            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
+          >
+            {item.item.weapon}
+          </Typography>
+        </Grid>
+        {/* <Grid item style={{ marginTop: "75px" }}> */}
+        {/* <Typography
+            variant="p"
+            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
+          >
+            <input
+              style={{ height: "20px", width: "20px", color: "white" }}
+              value={item.vision}
+              onChange={(e) => {
+                changeProductCount(e.target.value, item.item.id);
+              }}
+            ></input>
+          </Typography>
+        </Grid>
+        <Grid item style={{ marginTop: "75px" }}>
+          <Typography
+            variant="p"
+            color="text.secondary"
+            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
+          >
+            SubPrice: {item.subPrice}
+          </Typography>
+        </Grid> */}
+        <Grid item style={{ marginTop: "75px" }}>
+          <Button
+            style={{ marginLeft: "20px" }}
+            variant="outlined"
+            size="large"
+            onClick={() => deleteCartProduct(item.item.id)}
+          >
+            Delete
+          </Button>
+        </Grid>
+      </div>
     </Grid>
   );
 };

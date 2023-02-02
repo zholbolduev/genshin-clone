@@ -1,53 +1,22 @@
 {
   "products": [
     {
-      "title": "lycoris recoil",
-      "price": 987,
-      "img": "https://static.zerochan.net/Lycoris.Recoil.full.3706694.jpg",
-      "type": "action",
+      "title": "Jean",
+      "desc": "Descrition",
+      "img": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/genshin-impact/5/55/Jean.jpg",
+      "region": "Mondstadt",
+      "vision": "Anemo",
+      "weapon": "Sword",
       "id": 2
     },
     {
-      "title": "akame ga kill",
-      "price": 123,
-      "img": "https://i.pinimg.com/originals/7b/ef/90/7bef90845b56b5c4d04db30fa196fd0c.jpg",
-      "type": "fantasy",
-      "id": 3
-    },
-    {
-      "title": "monogatari",
-      "price": 111,
-      "img": "https://images.alphacoders.com/244/244443.jpg",
-      "type": "daily",
-      "id": 4
-    },
-    {
-      "title": "shinobu oshino",
-      "price": 888,
-      "img": "http://mobimg.b-cdn.net/v3/fetch/2f/2f67738efa0d81c84ea3893237927821.jpeg",
-      "type": "daily",
-      "id": 5
-    },
-    {
-      "title": "demon slayer",
-      "price": 1,
-      "img": "https://pibig.info/uploads/posts/2021-04/1618906483_22-pibig_info-p-klinok-rassekayushchii-demonov-anime-krasi-22.jpg",
-      "type": "fantasy",
-      "id": 6
-    },
-    {
-      "title": "melancholy of haruhi",
-      "price": 1,
-      "img": "https://thesunrotatesaroundabyss.files.wordpress.com/2018/04/untitled-1.png",
-      "type": "daily",
-      "id": 7
-    },
-    {
-      "title": "Shisui",
-      "price": 1,
-      "img": "http://pm1.narvii.com/7567/71052db1aba2cff6d7b6c56de6fd5546e3249417r1-900-675v2_uhq.jpg",
-      "type": "fantasy",
-      "id": 8
+      "title": "Kazuha",
+      "desc": "A wandering samurai of the once-famed Kaedehara Clan with an ability to read the sounds of nature, Kazuha is a temporary crewmember of The Crux. Despite being burdened by the many happenings of his past, Kazuha still maintains an easygoing disposition.",
+      "img": "https://cdn.mos.cms.futurecdn.net/rX39jegVzGZbUzCutqXwSA.jpg",
+      "region": "Inazuma",
+      "vision": "Anemo",
+      "weapon": "Sword",
+      "id": 15
     }
   ]
 }

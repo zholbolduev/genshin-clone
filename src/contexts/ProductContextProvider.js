@@ -42,6 +42,7 @@ const ProductContextProvider = ({ children }) => {
 
   const addProduct = async (obj) => {
     try {
+      console.log(obj);
       await axios.post(API, obj);
       navigate("/products");
     } catch (error) {
