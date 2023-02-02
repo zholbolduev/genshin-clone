@@ -6,7 +6,7 @@ body {
 }
 .main{
     width: 100%;
-    
+
 }
 .content {
   background-image: url("https://genshin.hoyoverse.com/_nuxt/img/615c72a.png");
@@ -200,4 +200,4 @@ body {
 }
 
 
-@media (min-width:)
+/* @media (min-width:) */
