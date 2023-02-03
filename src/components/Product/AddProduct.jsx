@@ -23,6 +23,7 @@ const AddProduct = () => {
   return (
     <Box className="add">
       <Box
+        className="imgadd"
         style={{
           marginRight: "250px",
           marginLeft: "250px",
@@ -30,7 +31,6 @@ const AddProduct = () => {
           alignItems: "center",
           justifyContent: "center",
         }}
-        className="imgadd"
         component="form"
         sx={{
           "& > :not(style)": { m: 1, width: "25ch" },
@@ -41,11 +41,11 @@ const AddProduct = () => {
         <div
           style={{
             marginRight: "50px",
-            width: "400px",
+            width: "auto",
             display: "flex",
             flexDirection: "column",
             flexWrap: "wrap",
-            height: "100%",
+            height: "auto",
           }}
         >
           <p

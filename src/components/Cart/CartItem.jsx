@@ -10,7 +10,7 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { useCart } from "../../contexts/CartContextProvider";
 import "../Cart/CartItem.css";
-import bc from "../Product/image/yellow.jpg";
+import bc from "../Product/image/1a4f9e2bd4d5f150161991ba73e7bb86.jpg";
 
 const CartItem = ({ item }) => {
   const { changeProductCount, deleteCartProduct } = useCart();
@@ -45,10 +45,9 @@ const CartItem = ({ item }) => {
         style={{
           display: "flex",
           // height: "40vh",
-          backgroundImage: `url(${bc})`,
-          backgroundSize: "cover",
-
-          width: "100%",
+          // backgroundImage: `url(${bc})`,
+          backgroundColor: "black",
+          width: "1000px",
           margin: "50px 0",
           borderRadius: "15px",
         }}
