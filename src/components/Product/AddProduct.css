@@ -17,12 +17,6 @@
   width: auto;
 }
 
-@media (max-width: 1400px) {
-  .imgadd {
-    max-width: 1000px;
-  }
-}
-
 .addab {
   position: relative;
   padding-left: 30px;

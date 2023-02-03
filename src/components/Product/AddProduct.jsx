@@ -41,11 +41,11 @@ const AddProduct = () => {
         <div
           style={{
             marginRight: "50px",
-            width: "auto",
+            width: "400px",
             display: "flex",
             flexDirection: "column",
             flexWrap: "wrap",
-            height: "auto",
+            height: "100%",
           }}
         >
           <p

@@ -107,10 +107,9 @@ li {
   margin: 0 auto;
 }
 
-.swiper {
+.news-main .swiper {
   width: 50%;
   height: 100%;
-  /* margin-right: 20px; */
 }
 
 .swiper-slide {

@@ -38,7 +38,7 @@ const Cart = () => {
       <Container>
         <Button
           variant="contained"
-          style={{ background: "red" }}
+          style={{ background: "red", marginBottom: "80px" }}
           onClick={clearCart}
         >
           Delete
