@@ -51,26 +51,113 @@ const ProductList = () => {
 
   return (
     <div className="container-bg">
-      <div className="products__conatiner">
+      <div className="products__container">
         <Grid
+          sx={{
+            marginTop: "5%",
+            backdropFilter: " blur(15px)",
+            border: "2px gray solid",
+            display: "flex",
+            justifyContent: "baseline",
+          }}
+        >
+          <FormControl sx={{ color: "white" }}>
+            <FormLabel
+              id="demo-row-radio-buttons-group-label"
+              sx={{ color: "white" }}
+            >
+              Choose a region
+            </FormLabel>
+            <RadioGroup
+              sx={{ color: "white" }}
+              row
+              aria-labelledby="demo-row-radio-buttons-group-label"
+              name="row-radio-buttons-group"
+              onChange={(e) => fetchByParams("region", e.target.value)}
+            >
+              <FormControlLabel
+                value="all"
+                control={<Radio sx={{ color: "white" }} />}
+                label="All"
+              />
+              <FormControlLabel
+                value="Mondstadt"
+                control={<Radio sx={{ color: "white" }} />}
+                label="Mondstadt"
+              />
+              <FormControlLabel
+                value="Liyue"
+                control={<Radio sx={{ color: "white" }} />}
+                label="Liyue"
+              />
+              <FormControlLabel
+                value="Inazuma"
+                control={<Radio sx={{ color: "white" }} />}
+                label="Inazuma"
+              />
+              <FormControlLabel
+                value="Sumeru"
+                control={<Radio sx={{ color: "white" }} />}
+                label="Sumeru"
+              />
+            </RadioGroup>
+          </FormControl>
+          <TextField
+            sx={{ color: "white" }}
+            id="input-with-icon-textfield"
+            label="Search..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start" sx={{ color: "white" }}>
+                  <SearchIcon sx={{ color: "white" }} />
+                </InputAdornment>
+              ),
+            }}
+            variant="standard"
+          />
+        </Grid>
+        <Box
           container
-          spacing={{ xs: 2, sm: 4, md: 10 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
+          spacing={{ sm: 2, md: 10 }}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            flexWrap: "wrap",
+            margin: "0 auto",
+            width: "100%",
+            gap: "4em",
           }}
         >
           {products ? (
             currentData().map((item) => (
-              <Grid item xs={6} sm={4} md={3}>
-                <ProductCard item={item} key={item.id} />
+              <Grid
+                item
+                xs={12}
+                sm={4}
+                md={4}
+                sx={{ margin: "0" }}
+                key={item.id}
+              >
+                <ProductCard item={item} />
               </Grid>
             ))
           ) : (
             <h2>Loading...</h2>
           )}
+        </Box>
+        <Grid item md={12}>
+          <Pagination
+            sx={{ color: "white" }}
+            count={count}
+            variant="text"
+            // color="stri"
+            shape="rounded"
+            page={page}
+            onChange={(e, p) => setPage(p)}
+          />
         </Grid>
       </div>
     </div>
