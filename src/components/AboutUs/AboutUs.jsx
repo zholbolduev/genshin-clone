@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// import required modules
 import { Pagination } from "swiper";
 import { Link } from "react-router-dom";
 
@@ -60,9 +59,9 @@ const AboutUs = () => {
         </Swiper>
       </div>
       <h2>Game Features</h2>
-      <div className="pecul-content">
+      <div className="features-content">
         <img
-          className="pecul-img-right1"
+          className="features-img-right1"
           src="https://cdn.shazoo.ru/468905_qYjlqY7SP2_genshin.jpeg"
           alt="Loading..."
         />
@@ -75,7 +74,7 @@ const AboutUs = () => {
           </p>
         </div>
         <img
-          className="pecul-img-left"
+          className="features-img-left"
           src="https://www.pcgamesn.com/wp-content/sites/pcgamesn/2021/05/genshin-impact-inazuma.jpg"
           alt="Loading..."
         />
@@ -88,7 +87,7 @@ const AboutUs = () => {
           </p>
         </div>
         <img
-          className="pecul-img-right"
+          className="features-img-right"
           src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200924/2020092418412067196.png"
           alt="Loading..."
         />
@@ -101,7 +100,7 @@ const AboutUs = () => {
           </p>
         </div>
         <img
-          className="pecul-img-left"
+          className="features-img-left"
           src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200924/2020092418412659408.png"
           alt="Loading..."
         />
@@ -114,7 +113,7 @@ const AboutUs = () => {
           </p>
         </div>
         <img
-          className="pecul-img-right"
+          className="features-img-right"
           src="https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200924/2020092418413164488.png"
           alt="Loading..."
         />
