@@ -51,96 +51,115 @@ const ProductList = () => {
 
   return (
     <div className="container-bg">
-      <Container>
-        <Box>
-          <Grid container spacing={3}>
-            <Grid
-              item
-              sx={{
-                justifyContent: "center",
-                display: "flex",
-                flexWrap: "wrap",
-              }}
-              md={9}
+      <div className="products__container">
+        <Grid
+          sx={{
+            marginTop: "5%",
+            backdropFilter: " blur(15px)",
+            border: "2px gray solid",
+            display: "flex",
+            justifyContent: "baseline",
+          }}
+        >
+          <FormControl sx={{ color: "white" }}>
+            <FormLabel
+              id="demo-row-radio-buttons-group-label"
+              sx={{ color: "white" }}
             >
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexWrap: "wrap",
-                  minHeight: "40vh",
-                  mb: "3.5vh",
-                }}
-              >
-                {products ? (
-                  currentData().map((item) => (
-                    <ProductCard item={item} key={item.id} />
-                  ))
-                ) : (
-                  <h2>Loading...</h2>
-                )}
-              </Box>
-              <Pagination
-                count={count}
-                variant="outlined"
-                shape="rounded"
-                page={page}
-                onChange={(e, p) => setPage(p)}
+              Choose a region
+            </FormLabel>
+            <RadioGroup
+              sx={{ color: "white" }}
+              row
+              aria-labelledby="demo-row-radio-buttons-group-label"
+              name="row-radio-buttons-group"
+              onChange={(e) => fetchByParams("region", e.target.value)}
+            >
+              <FormControlLabel
+                value="all"
+                control={<Radio sx={{ color: "white" }} />}
+                label="All"
               />
-            </Grid>
-            <Grid item md={3}>
-              <Paper>
-                <TextField
-                  id="input-with-icon-textfield"
-                  label="Search..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <SearchIcon />
-                      </InputAdornment>
-                    ),
-                  }}
-                  variant="standard"
-                />
-                <FormControl>
-                  <FormLabel id="demo-radio-buttons-group-label">
-                    Type
-                  </FormLabel>
-                  <RadioGroup
-                    aria-labelledby="demo-radio-buttons-group-label"
-                    defaultValue="all"
-                    onChange={(e) => fetchByParams("type", e.target.value)}
-                    name="radio-buttons-group"
-                  >
-                    <FormControlLabel
-                      value="all"
-                      control={<Radio />}
-                      label="all"
-                    />
-                    <FormControlLabel
-                      value="daily"
-                      control={<Radio />}
-                      label="daily"
-                    />
-                    <FormControlLabel
-                      value="action"
-                      control={<Radio />}
-                      label="action"
-                    />
-                    <FormControlLabel
-                      value="fantasy"
-                      control={<Radio />}
-                      label="fantasy"
-                    />
-                  </RadioGroup>
-                </FormControl>
-              </Paper>
-            </Grid>
-          </Grid>
+              <FormControlLabel
+                value="Mondstadt"
+                control={<Radio sx={{ color: "white" }} />}
+                label="Mondstadt"
+              />
+              <FormControlLabel
+                value="Liyue"
+                control={<Radio sx={{ color: "white" }} />}
+                label="Liyue"
+              />
+              <FormControlLabel
+                value="Inazuma"
+                control={<Radio sx={{ color: "white" }} />}
+                label="Inazuma"
+              />
+              <FormControlLabel
+                value="Sumeru"
+                control={<Radio sx={{ color: "white" }} />}
+                label="Sumeru"
+              />
+            </RadioGroup>
+          </FormControl>
+          <TextField
+            sx={{ color: "white" }}
+            id="input-with-icon-textfield"
+            label="Search..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start" sx={{ color: "white" }}>
+                  <SearchIcon sx={{ color: "white" }} />
+                </InputAdornment>
+              ),
+            }}
+            variant="standard"
+          />
+        </Grid>
+        <Box
+          container
+          spacing={{ sm: 2, md: 10 }}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexWrap: "wrap",
+            margin: "0 auto",
+            width: "100%",
+            gap: "4em",
+          }}
+        >
+          {products ? (
+            currentData().map((item) => (
+              <Grid
+                item
+                xs={12}
+                sm={4}
+                md={4}
+                sx={{ margin: "0" }}
+                key={item.id}
+              >
+                <ProductCard item={item} />
+              </Grid>
+            ))
+          ) : (
+            <h2>Loading...</h2>
+          )}
         </Box>
-      </Container>
+        <Grid item md={12}>
+          <Pagination
+            sx={{ color: "white" }}
+            count={count}
+            variant="text"
+            // color="stri"
+            shape="rounded"
+            page={page}
+            onChange={(e, p) => setPage(p)}
+          />
+        </Grid>
+      </div>
     </div>
   );
 };

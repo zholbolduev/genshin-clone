@@ -1,22 +1,58 @@
 {
   "products": [
     {
-      "title": "Jean",
-      "desc": "Descrition",
-      "img": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/genshin-impact/5/55/Jean.jpg",
-      "region": "Mondstadt",
-      "vision": "Anemo",
-      "weapon": "Sword",
+      "title": "Kazuha",
+      "desc": "iuy",
+      "img": "https://animecorner.me/wp-content/uploads/2021/06/anime-corner-kazuha-1-scaled.jpg",
+      "region": "Inazuma",
+      "vision": "oiuyt",
+      "weapon": "iuy",
+      "id": 1
+    },
+    {
+      "title": "Zhongli",
+      "desc": "A consultant of the Wangsheng Funeral Parlor, he is later revealed to be the current vessel of the Geo Archon, Morax, who has decided to experience the world from the perspective of a mortal.",
+      "img": "https://www.gamerguides.com/assets/media/17/216/Banner_Zhongli_Characters_Genshin_Impact.jpg",
+      "region": "Liyue",
+      "vision": "geo",
+      "weapon": "polearm",
       "id": 2
     },
     {
-      "title": "Kazuha",
-      "desc": "A wandering samurai of the once-famed Kaedehara Clan with an ability to read the sounds of nature, Kazuha is a temporary crewmember of The Crux. Despite being burdened by the many happenings of his past, Kazuha still maintains an easygoing disposition.",
-      "img": "https://cdn.mos.cms.futurecdn.net/rX39jegVzGZbUzCutqXwSA.jpg",
+      "title": "Xiao",
+      "desc": "iuy",
+      "img": "https://apptrigger.com/files/2022/01/Genshin-Impact-Xiao-1.jpg",
+      "region": "Liyue",
+      "vision": "anemo",
+      "weapon": "polearm",
+      "id": 3
+    },
+    {
+      "title": "Raiden Shogun",
+      "desc": "iuy",
+      "img": "https://cdn.gamebrott.com/wp-content/uploads/2021/09/8-Fakta-Raiden-Shogun-Genshin-Impact-yang-Perlu-Kamu-Ketahui-Header-1.jpg",
       "region": "Inazuma",
-      "vision": "Anemo",
-      "weapon": "Sword",
-      "id": 15
+      "vision": "electro",
+      "weapon": "polearm",
+      "id": 4
+    },
+    {
+      "title": "Venti",
+      "desc": "iuy",
+      "img": "https://staticg.sportskeeda.com/editor/2022/03/599aa-16473877590168-1920.jpg",
+      "region": "Mondstadt",
+      "vision": "anemo",
+      "weapon": "bow",
+      "id": 5
+    },
+    {
+      "title": "Nahida",
+      "desc": "iuy",
+      "img": "https://s.yimg.com/ny/api/res/1.2/uEHCD0AsmuQVst4hv5pcfw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTM2MA--/https://s.yimg.com/os/creatr-uploaded-images/2022-10/749c3ec0-55e2-11ed-bf3d-9b2f74f23df3",
+      "region": "Sumeru",
+      "vision": "dendro",
+      "weapon": "catalyst",
+      "id": 6
     }
   ]
 }

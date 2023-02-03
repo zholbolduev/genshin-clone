@@ -1,12 +1,16 @@
-body {
+.main {
+  width: 100%;
   background-image: url("../AboutUs/background/genshin\ bc.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
+
 .main {
   width: 100%;
 }
+
+
 .content {
   background-image: url("https://genshin.hoyoverse.com/_nuxt/img/615c72a.png");
   width: 100%;
@@ -198,6 +202,7 @@ body {
   cursor: pointer;
 }
 
+
 @media (max-width: 1400px) {
   .text-left {
     width: 30%;
@@ -233,3 +238,4 @@ body {
     height: 20%;
   }
 }
+

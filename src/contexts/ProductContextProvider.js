@@ -91,7 +91,6 @@ const ProductContextProvider = ({ children }) => {
     }
     const url = `${location.pathname}?${search.toString()}`;
     console.log(location);
-    console.log();
     navigate(url);
     // getProducts();
   };
