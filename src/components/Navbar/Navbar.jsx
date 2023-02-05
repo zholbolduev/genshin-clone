@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import BurgerMenu from "./BurgerMenu";
 import "./navbarStyle/navbar.css";
@@ -8,10 +8,9 @@ import "./navbarStyle/navbar.css";
 const Navbar = () => {
   const pages = [
     { name: "HOME", link: "/", id: 1 },
-    { name: "NEWS", link: "#", id: 2 },
+    { name: "NEWS", link: "#news", id: 2 },
     { name: "CHARACTERS", link: "/products", id: 3 },
     { name: "EXPLORE", link: "/aboutus", id: 4 },
-    { name: "MORE", link: "/#", id: 4 },
   ];
   const [menuActive, setMenuActive] = useState(false);
   const items = [
@@ -82,9 +81,6 @@ const Navbar = () => {
           </button>
         )}
         <div className="navbar__btn"></div>
-        <div className="burger-menu">
-          <RxHamburgerMenu />
-        </div>
       </div>
       <BurgerMenu
         active={menuActive}
