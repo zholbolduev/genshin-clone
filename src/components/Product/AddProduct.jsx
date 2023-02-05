@@ -172,7 +172,6 @@ const AddProduct = () => {
             className="addbtn"
             style={{
               width: "80%",
-
               marginTop: "4%",
               marginBottom: "4%",
               borderRadius: "10px",
@@ -184,7 +183,7 @@ const AddProduct = () => {
             Add Character
           </Button>
         </div>
-        <div className="addab" style={{ marginRight: "15px" }}>
+        <div className="addab" style={{ marginRight: "55px" }}>
           В Genshin Impact есть особая валюта — примогены. Данную валюту игроки
           могут тратить на самый разный контент, однако мы настоятельно
           рекомендуем вкладывать ее только в призывы. Игра то и дело будет

@@ -17,30 +17,6 @@ const CartItem = ({ item }) => {
   const { changeProductCount, deleteCartProduct } = useCart();
 
   return (
-    // <Box
-    //   sx={{
-    //     display: "flex",
-    //     backgroundColor: "orange",
-    //     height: "fit-content",
-    //   }}
-    // >
-    //   <Box
-    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
-    //   ></Box>
-    //   <Box
-    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
-    //   ></Box>
-    //   <Box
-    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
-    //   ></Box>
-    //   <Box
-    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
-    //   ></Box>
-    //   <Box
-    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
-    //   ></Box>
-    // </Box>
-
     <Grid container spacing={3} alignItems="center">
       <div
         className="ss"
