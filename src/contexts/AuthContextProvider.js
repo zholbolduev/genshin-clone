@@ -23,7 +23,6 @@ const AuthContextProvider = ({ children }) => {
   let [passwordError, setPasswordError] = useState("");
   let [hasAccount, setHasAccount] = useState("");
 
-
   const handleSignUp = () => {
     fire
       .auth()
