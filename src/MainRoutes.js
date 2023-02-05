@@ -9,6 +9,7 @@ import ContactUsPage from "./pages/ContactUsPage";
 import EditProductPage from "./pages/EditProductPage";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
+import PayFormPage from "./pages/PayFormPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ProductPage from "./pages/ProductPage";
 
@@ -26,6 +27,7 @@ const MainRoutes = () => {
     { link: "/cart", element: <CartPage />, id: 8 },
     { link: "/admin", element: <AdminPage />, id: 9 },
     { link: "/edit/:id", element: <EditProductPage />, id: 10 },
+    { link: "/payform", element: <PayFormPage />, id: 11 },
   ];
 
   const PRIVATE_ROUTES = [

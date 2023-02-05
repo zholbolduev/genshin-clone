@@ -14,13 +14,8 @@ const Navbar = () => {
   ];
   const { user, handleLogOut } = useAuth();
   return (
-    <div className="navbar">
-      <div className="navbar-logo">
-        <img
-          src="https://uploadstatic-sea.mihoyo.com/hk4e/upload/officialsites/202004/GIEN_1587984203_6764.png"
-          alt=""
-        />
-      </div>
+    <div className="header-navbar">
+      <div className="navbar-logo"></div>
       <ul className="navigation">
         {pages.map((page) => (
           <Link className="navigation__item" to={page.link} key={page.id}>
@@ -29,21 +24,22 @@ const Navbar = () => {
             </li>
           </Link>
         ))}
-        <Link className="navigation__item" to="/admin">
-          ADMIN
-        </Link>
-        <Link className="navigation__item" to="/cart">
-          LIKED
-        </Link>
-        {/* {user.email === "admin@admin.com" ? (
+        {user.email === "admin@admin.com" ? (
           <Link className="navigation__item" to="/admin">
             ADMIN
           </Link>
         ) : (
-          <Link className="navigation__item" to="/cart">
-            LIKED
-          </Link>
-        )} */}
+          <li>
+            <div>
+              <Link className="navigation__item" to="/cart">
+                FAVOURITES
+              </Link>
+              <Link className="navigation__item" to="/payform">
+                DONATE
+              </Link>
+            </div>
+          </li>
+        )}
       </ul>
       <div className="navbar-login">
         {user.email ? (
