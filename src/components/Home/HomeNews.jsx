@@ -8,7 +8,7 @@ import { Pagination } from "swiper";
 
 const homeNews = () => {
   return (
-    <div className="news">
+    <div className="news" id="news">
       <h3>NEWS</h3>
       <div className="news-main">
         <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
