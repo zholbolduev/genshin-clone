@@ -31,7 +31,6 @@ const ProductCard = ({ item }) => {
           <h5>{item.title}</h5>
         </div>
 
-        {/* {user.email === "admin@admin.com" ? ( */}
         <div
           style={{
             margin: "0 auto",
@@ -43,34 +42,39 @@ const ProductCard = ({ item }) => {
             padding: "0",
           }}
         >
-          <Button
-            style={{
-              color: "white",
-              textShadow:
-                "0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff ",
-              zIndex: "1",
-              width: "20%",
-              padding: "0",
-              fontSize: "calc(5px + 1vw)",
-            }}
-            onClick={() => deleteProduct(item.id)}
-          >
-            Delete
-          </Button>
-          <Button
-            style={{
-              color: "white",
-              textShadow:
-                "0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff ",
-              zIndex: "1",
-              width: "20%",
-              padding: "0",
-              fontSize: "calc(5px + 1vw)",
-            }}
-            onClick={() => navigate(`/edit/${item.id}`)}
-          >
-            Edit
-          </Button>
+          {user.email === "admin@admin.com" ? (
+            <Button
+              style={{
+                color: "white",
+                textShadow:
+                  "0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff ",
+                zIndex: "1",
+                width: "20%",
+                padding: "0",
+                fontSize: "calc(5px + 1vw)",
+              }}
+              onClick={() => deleteProduct(item.id)}
+            >
+              Delete
+            </Button>
+          ) : null}
+
+          {user.email === "admin@admin.com" ? (
+            <Button
+              style={{
+                color: "white",
+                textShadow:
+                  "0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff ",
+                zIndex: "1",
+                width: "20%",
+                padding: "0",
+                fontSize: "calc(5px + 1vw)",
+              }}
+              onClick={() => navigate(`/edit/${item.id}`)}
+            >
+              Edit
+            </Button>
+          ) : null}
           <Button
             style={{
               color: "white",
