@@ -50,6 +50,7 @@ const EditProduct = () => {
             flexDirection: "column",
             flexWrap: "wrap",
             height: "100%",
+            marginLeft: "20px",
           }}
         >
           <p
@@ -185,7 +186,7 @@ const EditProduct = () => {
             Save Character
           </Button>
         </div>
-        <div className="about" style={{ marginRight: "35px" }}>
+        <div className="about" style={{ marginRight: "130px" }}>
           Вы, наверное, заметили, что каждый раз, когда вы входите в Genshin
           Impact, главный экран меняется? Ну, если только вы не делали это
           всегда в одно и то же время суток. Разработчики постарались

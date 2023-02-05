@@ -12,7 +12,6 @@ const Cart = () => {
 
   return (
     <>
-      <h1>Likes</h1>
       <Container>
         <Paper sx={{ backgroundColor: "transparent" }}>
           {cart?.products.map((cartItem) => {
