@@ -23,14 +23,15 @@ const AddProduct = () => {
   return (
     <Box className="add">
       <Box
+        className="imgadd"
         style={{
-          marginRight: "250px",
-          marginLeft: "250px",
+          paddingLeft: "8%",
+          marginRight: "35%",
+          marginLeft: "7%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
         }}
-        className="imgadd"
         component="form"
         sx={{
           "& > :not(style)": { m: 1, width: "25ch" },
@@ -39,13 +40,14 @@ const AddProduct = () => {
         autoComplete="off"
       >
         <div
+          className="allinp"
           style={{
             marginRight: "50px",
             width: "400px",
             display: "flex",
             flexDirection: "column",
             flexWrap: "wrap",
-            height: "100%",
+            height: "90%",
           }}
         >
           <p
@@ -62,6 +64,8 @@ const AddProduct = () => {
           <input
             placeholder="Title"
             style={{
+              width: "80%",
+
               fontSize: "20px",
               marginTop: "5px",
               height: "30px",
@@ -78,6 +82,8 @@ const AddProduct = () => {
           <input
             placeholder="Descripton"
             style={{
+              width: "80%",
+
               fontSize: "20px",
               marginTop: "5px",
               height: "30px",
@@ -94,6 +100,8 @@ const AddProduct = () => {
           <input
             placeholder="Image"
             style={{
+              width: "80%",
+
               fontSize: "20px",
               marginTop: "5px",
               height: "30px",
@@ -110,6 +118,8 @@ const AddProduct = () => {
           <input
             placeholder="Region"
             style={{
+              width: "80%",
+
               fontSize: "20px",
               marginTop: "5px",
               height: "30px",
@@ -125,6 +135,8 @@ const AddProduct = () => {
           <input
             placeholder="Vision"
             style={{
+              width: "80%",
+
               fontSize: "20px",
               marginTop: "5px",
               height: "30px",
@@ -140,6 +152,8 @@ const AddProduct = () => {
           <input
             placeholder="Weapon"
             style={{
+              width: "80%",
+
               fontSize: "20px",
               marginTop: "5px",
               height: "30px",
@@ -157,8 +171,9 @@ const AddProduct = () => {
             color="success"
             className="addbtn"
             style={{
-              marginTop: "10px",
-              marginBottom: "20px",
+              width: "80%",
+              marginTop: "4%",
+              marginBottom: "4%",
               borderRadius: "10px",
             }}
             onClick={() => {
@@ -168,7 +183,7 @@ const AddProduct = () => {
             Add Character
           </Button>
         </div>
-        <div className="addab" style={{ marginRight: "15px" }}>
+        <div className="addab" style={{ marginRight: "55px" }}>
           В Genshin Impact есть особая валюта — примогены. Данную валюту игроки
           могут тратить на самый разный контент, однако мы настоятельно
           рекомендуем вкладывать ее только в призывы. Игра то и дело будет

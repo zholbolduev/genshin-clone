@@ -29,7 +29,7 @@ const EditProduct = () => {
         style={{
           width: "70%",
           marginRight: "250px",
-          marginLeft: "250px",
+          marginLeft: "10%",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-evenly",
@@ -43,8 +43,9 @@ const EditProduct = () => {
         autoComplete="off"
       >
         <div
+          className="div"
           style={{
-            width: "50%",
+            width: "70%",
             display: "flex",
             flexDirection: "column",
             flexWrap: "wrap",
@@ -64,6 +65,7 @@ const EditProduct = () => {
           </p>
           <input
             style={{
+              width: "80%",
               fontSize: "20px",
               marginTop: "15px",
               height: "50px",
@@ -79,6 +81,8 @@ const EditProduct = () => {
           />
           <input
             style={{
+              width: "80%",
+
               fontSize: "20px",
               marginTop: "15px",
               height: "50px",
@@ -95,6 +99,8 @@ const EditProduct = () => {
           />
           <input
             style={{
+              width: "80%",
+
               fontSize: "20px",
               marginTop: "15px",
               height: "50px",
@@ -111,6 +117,8 @@ const EditProduct = () => {
           />
           <input
             style={{
+              width: "80%",
+
               fontSize: "20px",
               marginTop: "15px",
               height: "50px",
@@ -127,6 +135,8 @@ const EditProduct = () => {
           />
           <input
             style={{
+              width: "80%",
+
               fontSize: "20px",
               marginTop: "15px",
               height: "50px",
@@ -143,6 +153,8 @@ const EditProduct = () => {
           />
           <input
             style={{
+              width: "80%",
+
               fontSize: "20px",
               marginTop: "15px",
               height: "50px",
@@ -173,7 +185,7 @@ const EditProduct = () => {
             Save Character
           </Button>
         </div>
-        <div className="about">
+        <div className="about" style={{ marginRight: "35px" }}>
           Вы, наверное, заметили, что каждый раз, когда вы входите в Genshin
           Impact, главный экран меняется? Ну, если только вы не делали это
           всегда в одно и то же время суток. Разработчики постарались

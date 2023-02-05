@@ -65,10 +65,10 @@ width: calc(100% + 80px);
   color: white !important;
 }
 
-.MuiPaginationItem-root {
-  /* background-color: white !important; */
-  /* backdrop-filter: blur(15px) !important; */
-}
+/* .MuiPaginationItem-root { */
+/* background-color: white !important; */
+/* backdrop-filter: blur(15px) !important; */
+/* } */
 
 .css-v4u5dn-MuiInputBase-root-MuiInput-root {
   margin-top: 1.5rem !important;

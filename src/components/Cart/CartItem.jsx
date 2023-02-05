@@ -10,45 +10,24 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { useCart } from "../../contexts/CartContextProvider";
 import "../Cart/CartItem.css";
-import bc from "../Product/image/b3d899f.png";
+import bc from "../Product/image/10d5480e8c0f3b8c1f7cda78c36f29f3.jpg";
+import { red } from "@mui/material/colors";
 
 const CartItem = ({ item }) => {
   const { changeProductCount, deleteCartProduct } = useCart();
 
   return (
-    // <Box
-    //   sx={{
-    //     display: "flex",
-    //     backgroundColor: "orange",
-    //     height: "fit-content",
-    //   }}
-    // >
-    //   <Box
-    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
-    //   ></Box>
-    //   <Box
-    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
-    //   ></Box>
-    //   <Box
-    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
-    //   ></Box>
-    //   <Box
-    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
-    //   ></Box>
-    //   <Box
-    //     sx={{ border: "2px red solid", width: "20%", height: "200px" }}
-    //   ></Box>
-    // </Box>
-
-    <Grid container spacing={5} alignItems="center">
+    <Grid container spacing={3} alignItems="center">
       <div
+        className="ss"
         style={{
           display: "flex",
-          // height: "40vh",
-          // backgroundImage: `url(${bc})`,
-          background: "black",
-          width: "100%",
-          margin: "50px 0",
+          // height: "40px",
+          backgroundImage: `url(${bc})`,
+
+          // backgroundColor: "black",
+          width: "1100px",
+          margin: "50px ",
           borderRadius: "15px",
         }}
       >
@@ -82,7 +61,7 @@ const CartItem = ({ item }) => {
             {item.item.title}
           </Typography>
         </Grid>
-        <Grid item>
+        {/* <Grid item>
           <Typography
             gutterBottom
             variant="p"
@@ -97,21 +76,33 @@ const CartItem = ({ item }) => {
           >
             {item.item.desc}
           </Typography>
-        </Grid>
-        <Grid item style={{ marginTop: "75px" }}>
+        </Grid> */}
+        <Grid item>
           <Typography
             variant="p"
             color="text.secondary"
-            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
+            component="div"
+            style={{
+              fontSize: "30px",
+              marginLeft: "20px",
+              color: "white",
+              marginTop: "75px",
+            }}
           >
             {item.item.region}
           </Typography>
         </Grid>
-        <Grid item style={{ marginTop: "75px" }}>
+        <Grid item>
           <Typography
             variant="p"
             color="text.secondary"
-            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
+            component="div"
+            style={{
+              fontSize: "30px",
+              marginLeft: "20px",
+              color: "white",
+              marginTop: "75px",
+            }}
           >
             {item.item.vision}
           </Typography>
@@ -119,8 +110,14 @@ const CartItem = ({ item }) => {
         <Grid item style={{ marginTop: "75px" }}>
           <Typography
             variant="p"
+            component="div"
             color="text.secondary"
-            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
+            style={{
+              fontSize: "30px",
+              marginLeft: "20px",
+              color: "white",
+              marginTop: "75px",
+            }}
           >
             {item.item.weapon}
           </Typography>
@@ -148,10 +145,12 @@ const CartItem = ({ item }) => {
             SubPrice: {item.subPrice}
           </Typography>
         </Grid> */}
-        <Grid item style={{ marginTop: "75px" }}>
+        <Grid item>
           <Button
-            style={{ marginLeft: "20px" }}
+            component="div"
+            style={{ marginLeft: "20px", marginTop: "75px" }}
             variant="outlined"
+            color="error"
             size="large"
             onClick={() => deleteCartProduct(item.item.id)}
           >
