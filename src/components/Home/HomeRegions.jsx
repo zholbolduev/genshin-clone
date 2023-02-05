@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import "./homeStyle/home.css";
 
 const HomeRegions = () => {
-  const navigate = useNavigate();
   return (
     <div className="city">
       <ul className="city__list">

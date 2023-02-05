@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContextProvider";
+import BurgerMenu from "./BurgerMenu";
 import "./navbarStyle/navbar.css";
 
 const Navbar = () => {
@@ -12,10 +13,28 @@ const Navbar = () => {
     { name: "EXPLORE", link: "/aboutus", id: 4 },
     { name: "MORE", link: "/#", id: 4 },
   ];
+  const [menuActive, setMenuActive] = useState(false);
+  const items = [
+    { value: "Home", href: "/" },
+    { value: "News", href: "#" },
+    { value: "Characters", href: "/products" },
+    { value: "Explore", href: "/aboutus" },
+    { value: "More", href: "/#" },
+    { value: "Admin", href: "/admin" },
+    { value: "Favorites", href: "/cart" },
+  ];
   const { user, handleLogOut } = useAuth();
   return (
-    <div className="header-navbar">
-      <div className="navbar-logo"></div>
+    <div className="navbar">
+      <div className="navbar-logo">
+        {/* <img
+          src="https://uploadstatic-sea.mihoyo.com/hk4e/upload/officialsites/202004/GIEN_1587984203_6764.png"
+          alt=""
+        /> */}
+      </div>
+      <div className="burger-btn" onClick={() => setMenuActive(!menuActive)}>
+        <span />
+      </div>
       <ul className="navigation">
         {pages.map((page) => (
           <Link className="navigation__item" to={page.link} key={page.id}>
@@ -67,6 +86,12 @@ const Navbar = () => {
           <RxHamburgerMenu />
         </div>
       </div>
+      <BurgerMenu
+        active={menuActive}
+        setActive={setMenuActive}
+        header={"Menu"}
+        items={items}
+      />
     </div>
   );
 };

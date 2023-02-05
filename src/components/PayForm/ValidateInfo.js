@@ -10,7 +10,7 @@ export default function validateInfo(values) {
   creditCard.postalCode = valid.postalCode(values.cardPostalCode);
 
   errors.show = true;
-  errors.variant = "danger";
+  errors.severity = "error";
   errors.message = "An unknown error occured. Please try again later";
   errors.cname = false;
   errors.cnumber = false;
@@ -90,6 +90,8 @@ export default function validateInfo(values) {
     errors.variant = "success";
     errors.message = "Credit Card is valid";
   }
+
+  console.log(errors);
 
   return errors;
 }
