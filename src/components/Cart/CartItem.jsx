@@ -10,23 +10,31 @@ import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { useCart } from "../../contexts/CartContextProvider";
 import "../Cart/CartItem.css";
-import bc from "../Product/image/10d5480e8c0f3b8c1f7cda78c36f29f3.jpg";
+import bc from "../Product/image/violet.jpg";
 import { red } from "@mui/material/colors";
 
 const CartItem = ({ item }) => {
   const { changeProductCount, deleteCartProduct } = useCart();
 
   return (
-    <Grid container spacing={3} alignItems="center">
+    <Grid
+      container
+      spacing={8}
+      alignItems="center"
+      style={{ paddingTop: "220px" }}
+    >
       <div
         className="ss"
         style={{
           display: "flex",
-          // height: "40px",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
           backgroundImage: `url(${bc})`,
-
+          backgroundSize: "750px",
           // backgroundColor: "black",
-          width: "1100px",
+          marginLeft: "25%",
+          width: "60%",
           margin: "50px ",
           borderRadius: "15px",
         }}
@@ -34,13 +42,12 @@ const CartItem = ({ item }) => {
         <Grid item>
           <Box
             style={{
-              display: "flex",
               borderRadius: "15px",
             }}
             component="img"
             sx={{
-              height: 200,
-              width: 400,
+              height: "90%",
+              width: "99%",
             }}
             src={item.item.img}
             alt={item.item.title}
@@ -54,29 +61,12 @@ const CartItem = ({ item }) => {
             style={{
               color: "white",
               fontSize: "30px",
-              marginLeft: "20px",
-              marginTop: "75px",
             }}
           >
             {item.item.title}
           </Typography>
         </Grid>
-        {/* <Grid item>
-          <Typography
-            gutterBottom
-            variant="p"
-            component="div"
-            style={{
-              color: "white",
 
-              fontSize: "30px",
-              marginLeft: "20px",
-              marginTop: "75px",
-            }}
-          >
-            {item.item.desc}
-          </Typography>
-        </Grid> */}
         <Grid item>
           <Typography
             variant="p"
@@ -84,9 +74,8 @@ const CartItem = ({ item }) => {
             component="div"
             style={{
               fontSize: "30px",
-              marginLeft: "20px",
               color: "white",
-              marginTop: "75px",
+              marginTop: "10px",
             }}
           >
             {item.item.region}
@@ -99,56 +88,32 @@ const CartItem = ({ item }) => {
             component="div"
             style={{
               fontSize: "30px",
-              marginLeft: "20px",
               color: "white",
-              marginTop: "75px",
+              marginTop: "10px",
             }}
           >
             {item.item.vision}
           </Typography>
         </Grid>
-        <Grid item style={{ marginTop: "75px" }}>
+        <Grid item>
           <Typography
             variant="p"
             component="div"
             color="text.secondary"
             style={{
               fontSize: "30px",
-              marginLeft: "20px",
               color: "white",
-              marginTop: "75px",
+              marginTop: "10px",
             }}
           >
             {item.item.weapon}
           </Typography>
         </Grid>
-        {/* <Grid item style={{ marginTop: "75px" }}> */}
-        {/* <Typography
-            variant="p"
-            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
-          >
-            <input
-              style={{ height: "20px", width: "20px", color: "white" }}
-              value={item.vision}
-              onChange={(e) => {
-                changeProductCount(e.target.value, item.item.id);
-              }}
-            ></input>
-          </Typography>
-        </Grid>
-        <Grid item style={{ marginTop: "75px" }}>
-          <Typography
-            variant="p"
-            color="text.secondary"
-            style={{ fontSize: "30px", marginLeft: "20px", color: "white" }}
-          >
-            SubPrice: {item.subPrice}
-          </Typography>
-        </Grid> */}
+
         <Grid item>
           <Button
             component="div"
-            style={{ marginLeft: "20px", marginTop: "75px" }}
+            style={{ marginTop: "15px", marginBottom: "50px" }}
             variant="outlined"
             color="error"
             size="large"

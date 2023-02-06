@@ -7,8 +7,8 @@ const CartPage = () => {
     <div
       style={{
         backgroundImage: `url(${back})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+
+        backgroundSize: "1580px ",
       }}
     >
       <Cart />
