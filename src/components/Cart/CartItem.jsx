@@ -28,6 +28,7 @@ const CartItem = ({ item }) => {
         style={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           flexDirection: "column",
           backgroundImage: `url(${bc})`,
           backgroundSize: "750px",
