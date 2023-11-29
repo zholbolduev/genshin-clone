@@ -2,9 +2,8 @@
 
 ## Overview
 
-I was responsible for developing and managing the admin panel (editing, adding, deleting), overseeing the main
-page, and implementing a "Favorites" feature for character cards. The project was successfully completed with a
-high rating.
+
+"The Genshin Clone" is a web project inspired by the popular game Genshin Impact. Built using React.js and possibly other technologies, the project replicates key gameplay elements such as an open world, characters, and combat system. Users can explore the virtual world, choose characters, and engage in online interactions.
 
 ## Stack:
 
