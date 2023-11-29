@@ -15,4 +15,4 @@ Javascript, Css, React, React Router, Mui, Firebase, Swiper. ⚙️🔧
 1. Clone this repository 📋
 2. Install all necessary dependencies: `npm i` 🛠️
 3. Start the app: `npm start` ▶️
-4. Open a new terminal, Start the JSON server `npm json-server --watch db.json -p 9000`
+4. Open a new terminal, Start the JSON server `npm json-server --watch db.json -p 8000`
